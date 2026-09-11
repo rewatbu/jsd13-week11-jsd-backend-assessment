@@ -1,0 +1,21 @@
+### Test route
+GET http://localhost:3000/
+
+### Get all products
+GET http://localhost:3000/products
+
+### Get product by id
+GET http://localhost:3000/products/2
+
+### Get product by id >> "Product not found"
+GET http://localhost:3000/products/999
+
+
+### Create/add new product
+POST http://localhost:3000/products 
+Content-Type: application/json
+
+{
+    "productName": "New Aroma Soap",
+    "price": 99
+}
