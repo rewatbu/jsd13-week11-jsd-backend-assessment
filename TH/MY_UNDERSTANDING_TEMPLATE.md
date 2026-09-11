@@ -39,18 +39,23 @@ rate ตัวเองอย่างตรงไปตรงมาโดยใ
 **2. `express.json()` คืออะไร และจะเกิดอะไรขึ้นถ้าคุณไม่ใส่มัน?**
 
 *คำตอบของคุณ:*
+express.json() คือ middleware ตัวหนึ่งที่ทำหน้าที่ในการแปลงข้อมูล request response ที่ส่งไปมาระหว่าง browser/client และ server ให้อยู่ในรูปแบบที่เข้าใจกันได้ เช่น browser ส่งคำขอไปใน req.body ซึ่งเป็นรูปแบบ JSON แล้ว express.json() ก็จะทำให้ข้อมูลนั้นกลายเป็น object ของ JavaScript เพื่อให้ server สามารถใช้งานได้ ถ้าไม่ใช้มันใน express ก็จะทำให้เกิด error ที่เป็น TypeError เพราะข้อมูลที่ส่งไปให้เซิฟเวอร์ถูกมองเป็น undefined ทำให้เซิฟเวอร์ทำงานต่อไม่ได้
 
 ---
 
 **3. `req.body`, `req.params`, และ `req.query` ต่างกันอย่างไร? ยกตัวอย่างจริงจาก API ของคุณสำหรับแต่ละตัว**
 
 *คำตอบของคุณ:*
+req.body คือสิ่งที่ถูกส่งไปกับ request body เมื่อใช้ HTTP method POST/PUT/PATCH
+req.params คือ url path parameters เช่น id ใน http://localhost:3000/products/2 req.params.id คือ 2 ใน app.put("products/:id", ...)
+req.query คือ query string parameters ที่อยู่ใน url ต่อจาก url path เช่น http://localhost:3000/products?productName=soap&price=99 เพื่อใช้ในการค้นหาหรือกรองข้อมูลที่ต้องการ
 
 ---
 
 **4. HTTP status codes คืออะไร? ระบุรายการ status code ทุกตัวที่คุณใช้ใน API และอธิบายว่าทำไมถึงเลือกใช้ในแต่ละสถานการณ์**
 
 *คำตอบของคุณ:*
+
 
 ---
 
@@ -75,6 +80,11 @@ rate ตัวเองอย่างตรงไปตรงมาโดยใ
 **8. CRUD คืออะไร? จับคู่แต่ละ operation กับ HTTP method และ route ที่คุณใช้ใน API**
 
 *คำตอบของคุณ:*
+CRUD ย่อมาจาก create, read, update, delete คือการจัดการข้อมูลขั้นพื้นฐานที่จำเป็นในการบริหารจัดการแอปหรือฐานข้อมูล
+GET คือ read
+POST คือ create
+PUT/PATCH คือ update
+DELETE คือ delete
 
 ---
 

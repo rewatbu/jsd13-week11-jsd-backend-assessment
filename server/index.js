@@ -37,7 +37,7 @@ app.get("/products", async (req, res, next) => {
 // Get product by id
 app.get("/products/:id", (req, res, next) => {
     try {
-    const id = Number(req.params.id);
+    const id = req.params.id;
     
     const product = products.find((product) => product.id === id);
 
