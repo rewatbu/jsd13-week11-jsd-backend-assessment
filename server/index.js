@@ -66,11 +66,11 @@ app.post("/products", async (req, res, next) => {
         return res.status(400).json({ message: "Name is required and must be a string" });
     }
 
-    // const highestId = products.reduce((max, product) => Math.max(max, Number(product.id)), 0 );
-    // const nextId = highestId + 1;
+    const highestId = products.reduce((max, product) => Math.max(max, Number(product.id)), 0 );
+    const nextId = highestId + 1;
 
     const newProduct = {
-        id: String(Date.now()),
+        id: String(nextId),
         productName: productName,
         price: price,
         quantity: quantity,

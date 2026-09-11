@@ -1,18 +1,18 @@
 export const products = [
   {
-    id: String(Date.now()),
+    id: "1",
     productName: "Good Soap",
     price: 88,
     quantity: 100,
   },
   {
-    id: String(Date.now()),
+    id: "2",
     productName: "Premium Soap",
     price: 129,
     quantity: 100,
   },
   {
-    id: String(Date.now()),
+    id: "3",
     productName: "Super Soap",
     price: 149,
     quantity: 60,
