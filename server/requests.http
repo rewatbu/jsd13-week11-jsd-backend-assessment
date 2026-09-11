@@ -16,6 +16,27 @@ POST http://localhost:3000/products
 Content-Type: application/json
 
 {
-    "productName": "New Aroma Soap",
-    "price": 99
+    "productName": "New Prototype Soap",
+    "price": 999,
+    "quantity": 5
 }
+
+### Update the product
+PUT http://localhost:3000/products/2
+Content-Type: application/json
+
+{
+    "productName": "Classic Soap",
+    "price": 89
+}
+
+### Edit a product
+PATCH http://localhost:3000/products/1 
+Content-Type: application/json
+
+{
+    "price": 89
+}
+
+### Delete a product
+DELETE http://localhost:3000/products/3
